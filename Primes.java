@@ -29,6 +29,7 @@ public class Primes {
         break;
         }
        }
+       System.out.println("Prime numbers up to " + n + ":");
        for (int i = 2; i < n + 1; i++){
        if (arr[i] == true){
         System.out.println(i);
@@ -36,7 +37,7 @@ public class Primes {
        }
     }
     int precent = (int) Math.round((count * 100.0) / n );
-    System.out.println("Prime numbers up to " + n + ":");
+    
     System.out.println( "There are " + count + " primes between 2 and " + n + " (" + precent + "% are primes)" );
 
 
