@@ -98,8 +98,8 @@ public class ArrCharOps {
         for (int i = 0; i < arr1.length; i++){
             arr3[i] = arr1[i]; 
         }
-         for (int i = arr1.length -1; i < arr3.length; i++){
-            arr3[i] = arr2[i]; 
+         for (int i = 0; i < arr2.length; i++){
+            arr3[arr1.length + i] = arr2[i]; 
         }
         return arr3;
     }
@@ -109,14 +109,16 @@ public class ArrCharOps {
      *  For example, if arr contains the characters "hamburger", then subArray(4, 8) returns an array of
      *  characters containing the characters "urge".
      */     
-    public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
-        char[] arr1 = new char[arr[endIndex] - 1 - arr[beginIndex]]; 
-        for (int i = beginIndex; i < endIndex; i++){
-            arr1[i] = arr[i];
-        }
-        return null;
+ public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
+    int length = endIndex - beginIndex;        
+    char[] result = new char[length];
+
+    for (int i = 0; i < length; i++) {
+        result[i] = arr[beginIndex + i];
     }
 
+    return result;
+}
      /** Returns a single integer that represents the given array. This integer is sometimes 
      *  referred to as the array's "hash code". Later in the course we'll explain what these 
      *  hash codes are used for. For now, simply implement the specification given below.
