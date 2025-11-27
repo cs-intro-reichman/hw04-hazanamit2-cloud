@@ -21,7 +21,7 @@ public class MyString {
        char[] transfer = new char[str.length()]; 
         for (int i = 0; i < str.length(); i++ ){
         char c = str.charAt(i);
-        if ('A' >= c && c <= 'Z' ) {
+        if ('A' <= c && c <= 'Z' ) {
             transfer[i]= (char)(c + 32);
         }
         else {transfer[i] = c;} 
